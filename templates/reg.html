@@ -1,0 +1,323 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container">
+  <a class='btn' href="{{ url_for('home') }}"><</a>
+  <br><br>
+  <h1 class="border-bottom mb-4">Registration form</h1>
+  <form method="POST" action="" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div calss='form-group'>
+      {{ form.team.label(class='form-control-label') }}
+      {% if form.team.errors %}
+      {{ form.team(class='form-control form-control-lg is-invalid') }}
+      <div class='invalid-feedback'>
+        {% for error in form.team.errors %}
+        <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.team(class='form-control', placeholder='Team name') }}  
+      {% endif %}
+    </div>
+    <br>
+    <h1 class="border-bottom mb-4"></h1>
+    <br>
+    <h3 class=" mb-4">Team member 1*</h3>
+    <div class="form-group">
+      {{ form.name1.label(class="form-control-label") }}
+
+      {% if form.name1.errors %}
+      {{ form.name1(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.name1.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.name1(class="form-control", placeholder="Name*") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.uni1.label(class="form-control-label") }}
+      {% if form.uni1.errors %}
+      {{ form.uni1(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.uni1.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.uni1(class="form-control", placeholder="Institution*") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.email1.label(class="form-control-label") }}
+
+      {% if form.email1.errors %}
+      {{ form.email1(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.email1.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.email1(class="form-control", placeholder="Email*") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.phone1.label(class="form-control-label") }}
+
+      {% if form.phone1.errors %}
+      {{ form.phone1(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.phone1.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.phone1(class="form-control", placeholder="Phone number*") }}
+      {% endif %}
+    </div>
+
+
+<p class="border-bottom mt-5"></p>
+<h3 class="mb-4">Team member 2</h3>
+
+  <div class="form-group">
+      {{ form.name2.label(class="form-control-label") }}
+
+      {% if form.name2.errors %}
+      {{ form.name2(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.name2.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.name2(class="form-control", placeholder="Name") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.uni2.label(class="form-control-label") }}
+      {% if form.uni2.errors %}
+      {{ form.uni2(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.uni2.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.uni2(class="form-control", placeholder="Institution") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.email2.label(class="form-control-label") }}
+
+      {% if form.email2.errors %}
+      {{ form.email2(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.email2.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.email2(class="form-control", placeholder="Email") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.phone2.label(class="form-control-label") }}
+
+      {% if form.phone2.errors %}
+      {{ form.phone2(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.phone2.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.phone2(class="form-control", placeholder="Phone number") }}
+      {% endif %}
+    </div>
+
+
+
+<p class="border-bottom mt-5"></p>
+<h3 class="mb-4">Team member 3</h3>
+
+  <div class="form-group">
+      {{ form.name3.label(class="form-control-label") }}
+
+      {% if form.name3.errors %}
+      {{ form.name3(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.name3.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.name3(class="form-control", placeholder="Name") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.uni3.label(class="form-control-label") }}
+      {% if form.uni3.errors %}
+      {{ form.uni3(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.uni3.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.uni3(class="form-control", placeholder="Institution") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.email3.label(class="form-control-label") }}
+
+      {% if form.email3.errors %}
+      {{ form.email3(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.email3.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.email3(class="form-control", placeholder="Email") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.phone3.label(class="form-control-label") }}
+
+      {% if form.phone3.errors %}
+      {{ form.phone3(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.phone3.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.phone3(class="form-control", placeholder="Phone number") }}
+      {% endif %}
+    </div>
+
+
+
+
+<p class="border-bottom mt-5"></p>
+<h3 class="mb-4">Team member 4</h3>
+
+  <div class="form-group">
+      {{ form.name4.label(class="form-control-label") }}
+
+      {% if form.name4.errors %}
+      {{ form.name4(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.name4.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.name4(class="form-control", placeholder="Name") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.uni4.label(class="form-control-label") }}
+      {% if form.uni4.errors %}
+      {{ form.uni4(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.uni4.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.uni4(class="form-control", placeholder="Institution") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.email4.label(class="form-control-label") }}
+
+      {% if form.email4.errors %}
+      {{ form.email4(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.email4.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.email4(class="form-control", placeholder="Email") }}
+      {% endif %}
+    </div>
+
+
+
+    <div class="form-group">
+      {{ form.phone4.label(class="form-control-label") }}
+
+      {% if form.phone4.errors %}
+      {{ form.phone4(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.phone4.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.phone4(class="form-control", placeholder="Phone number") }}
+      {% endif %}
+    </div>
+
+    <br>
+    <p class="border-bottom mt-5"></p>
+    <p><i><b>***Please pay 300tk for each team member to make registration successful. Bkash number: 01521400665***</b></i></p>
+    <div class="form-group">
+      {{ form.trxid.label(class="form-control-label") }}
+
+      {% if form.trxid.errors %}
+      {{ form.trxid(class="form-control form-control-lg is-invalid") }}
+      <div class="invalid-feedback">
+        {% for error in form.trxid.errors %}
+          <span>{{ error }}</span>
+        {% endfor %}
+      </div>
+      {% else %}
+      {{ form.trxid(class="form-control", placeholder="TrxID") }}
+      {% endif %}
+    </div>
+    <br>
+    <div class='form-group'>{{ form.submit(class='btn') }}</div>
+
+  </form>
+</div>
+{% endblock %}

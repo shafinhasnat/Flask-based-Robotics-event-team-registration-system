@@ -1,0 +1,18 @@
+{% if current_user.is_active %}
+<a href="{{ url_for('logout') }}">Logout</a>
+<br><br>
+{% for team in teams %}
+	<div>
+		<h2>{{ team.id }}) {{ team.team }}</h2>
+		<ul>
+			<li><b>Team leader:</b> {{ team.name1 }}</li>
+			<li><b>University:</b> {{ team.uni1 }}</li>
+			<li><b>Email:</b> {{ team.email1 }}</li>
+			<li><b>Phone:</b> {{ team.phone1 }}</li>
+			<li><b>trxid:</b> {{ team.trxid }}</li>
+		</ul>
+
+
+	</div>
+{% endfor %}
+{% endif %}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+Template Name: Wavefire
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>MIE day-{{ title }}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{{ url_for('static', filename='layout/styles/layout.css') }}" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+
+</head>
+
+<body id="top">
+<div class="wrapper bgded overlay" style="background-image:url('{{ url_for('static', filename='images/demo/backgrounds/02.png') }}');">
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <p>sponsor name- Presents</p>
+      <h3 class="heading">MECHATRONICS DAY 2019</h3>
+      <a class='btn' href="#">Event</a>
+      
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+
+<div class="col">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}{% endblock %}
+
+
+
+
+
+
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_half first">
+      <h6 class="heading">Location:</h6>
+      <p>Chittagong University of Engineering and Technology</p>
+      <p>Pahartali, Raozan upazila, Chittagong-4349</p>
+      <p><a href="https://www.google.com/maps/place/Chittagong+University+of+Engineering+and+Technology+(CUET)/@22.3610464,91.8230123,209a,35y,174.53h,45t/data=!3m1!1e3!4m5!3m4!1s0x30ad2fca34ae5549:0x35c88a37b3e90e97!8m2!3d22.4600036!4d91.971047" class='btn'>Google maps</a></p>
+      
+    </div>
+    
+    <div class="one_half">
+      <h6 class="heading">Contact:</h6>
+      <p>Shafin- 01521400665</p>
+      <p>shafinhasnat97@gmail.com</p>
+      
+      
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_right">Developed by- <a href="https://www.facebook.com/shafin.hasnat" class="btn">Shafin Hasnat</a></p>
+    <p><a href="{{ url_for('admin') }}" class="btn">admin</a></p>
+    
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- #######################################################################################
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{{ url_for('static', filename='layout/scripts/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.backtotop.js') }}"></script>
+<script src="{{ url_for('static', filename='layout/scripts/jquery.mobilemenu.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

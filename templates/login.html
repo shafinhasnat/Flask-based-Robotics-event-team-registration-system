@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<form method="POST" action="" enctype="multipart/form-data" class='container'>
+	    {{ form.hidden_tag() }}
+	    <div calss='form-group'>
+	      {{ form.pwd.label(class='form-control-label') }}
+	      {% if form.pwd.errors %}
+	      {{ form.pwd(class='form-control form-control-lg is-invalid') }}
+	      <div class='invalid-feedback'>
+	        {% for error in form.pwd.errors %}
+	        <span>{{ error }}</span>
+	        {% endfor %}
+	      </div>
+	      {% else %}
+	      {{ form.pwd(class='form-control', placeholder='Admin password') }}  
+	      {% endif %}
+	    </div>
+	    <br>
+   		 <div class='form-group'>{{ form.submit(class='btn') }}</div>
+	  </form>
+{% endblock %}
