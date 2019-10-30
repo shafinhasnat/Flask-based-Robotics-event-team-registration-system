@@ -6,13 +6,13 @@ from flask_login import login_user,logout_user, login_required,current_user,Logi
 app=Flask(__name__)
 app.config['SECRET_KEY'] = 'mieisthebestmiedaytekhubmojahobe'
 
-ENV = 'dev'
+ENV = 'prod'
 if ENV == 'dev':
 	app.debug = True
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:19971904@localhost/miereg'
 else:
 	app.debug=False
-	app.config = ''
+	app.config = 'postgres://aazmqvtooyrcmu:56e1c61f87f6e6cbed71ed4c0413c4441cbcdf08e12b71a040286714a41ceda3@ec2-174-129-253-27.compute-1.amazonaws.com:5432/def8rb96r96eld'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -100,5 +100,5 @@ def logout():
 	return redirect(url_for('home'))
 
 
-if __name__=='__main__':
-	app.run()
+# if __name__=='__main__':
+# 	app.run()
