@@ -2,6 +2,7 @@ from flask import Flask, render_template,redirect,url_for,flash
 from forms import RegForm, login
 from flask_sqlalchemy import SQLAlchemy 
 from flask_login import login_user,logout_user, login_required,current_user,LoginManager,UserMixin
+import os
 
 app=Flask(__name__)
 app.config['SECRET_KEY'] = 'mieisthebestmiedaytekhubmojahobe'
@@ -12,7 +13,8 @@ if ENV == 'dev':
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:19971904@localhost/miereg'
 else:
 	app.debug=False
-	app.config = 'postgres://aazmqvtooyrcmu:56e1c61f87f6e6cbed71ed4c0413c4441cbcdf08e12b71a040286714a41ceda3@ec2-174-129-253-27.compute-1.amazonaws.com:5432/def8rb96r96eld'
+	app.config = "postgres://aazmqvtooyrcmu:56e1c61f87f6e6cbed71ed4c0413c4441cbcdf08e12b71a040286714a41ceda3@ec2-174-129-253-27.compute-1.amazonaws.com:5432/def8rb96r96eld"
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
