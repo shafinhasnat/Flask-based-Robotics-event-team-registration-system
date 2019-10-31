@@ -15,7 +15,7 @@ else:
 	app.debug=False
 	app.config = "postgres://aazmqvtooyrcmu:56e1c61f87f6e6cbed71ed4c0413c4441cbcdf08e12b71a040286714a41ceda3@ec2-174-129-253-27.compute-1.amazonaws.com:5432/def8rb96r96eld"
 
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
