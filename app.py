@@ -8,7 +8,7 @@ app=Flask(__name__)
 app.config['SECRET_KEY'] = 'mieisthebestmiedaytekhubmojahobe'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
-ENV = 'prod'
+ENV = 'dev'
 if ENV == 'dev':
 	app.debug = True
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:19971904@localhost/miereg'
@@ -19,7 +19,7 @@ else:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
-db.create_all()
+
 class Register(db.Model):
 	__tablename__ = 'teams'
 	id = db.Column(db.Integer, primary_key=True)
