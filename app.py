@@ -8,13 +8,13 @@ app=Flask(__name__)
 app.config['SECRET_KEY'] = 'mieisthebestmiedaytekhubmojahobe'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
-ENV = 'dev'
+ENV = 'prod'
 if ENV == 'dev':
 	app.debug = True
 	app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:19971904@localhost/miereg'
 else:
 	app.debug=False
-	app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://aazmqvtooyrcmu:56e1c61f87f6e6cbed71ed4c0413c4441cbcdf08e12b71a040286714a41ceda3@ec2-174-129-253-27.compute-1.amazonaws.com:5432/def8rb96r96eld"
+	app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://wqojuftlwmxvdi:91f8d07669fa5aa7a389507c8f33ca3e3f097776673cab66a5856925e6ec7a0e@ec2-174-129-253-104.compute-1.amazonaws.com:5432/daui007rqo5cp4"
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
